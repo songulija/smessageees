@@ -41,3 +41,14 @@ display flex & direction in which items 'll be placed is column(vertical). heigh
 /* make input to dont have border, color of input to be transparent. and when clicking
 and writing it'll not have outline  */
 
+
+/* hide scrollbar for chrome mozilla and opera */
+.sidebar__chats::-webkit-scrollbar{
+    display: none;
+}
+
+.sidebar__chats{
+    overflow: scroll;
+    scrollbar-width: none;
+}
+/* if overflow then scroll */

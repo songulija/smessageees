@@ -1,0 +1,34 @@
+.sidebarChat{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid lightgray;
+    cursor: pointer;
+}
+/* display flex This defines a flex container; inline or block depending on
+ the given value. It enables a flex context for all its direct children.,
+  align everything centrally */
+
+.sidebarChat:hover{
+    background-color: #3e93fd;
+    color: white;
+}
+
+.sidebarChat__info{
+    margin-left: 15px;
+    position: relative;
+    width: 100%;
+}
+/* positioned relative to its normal position. */
+
+.sidebarChat__info > small{
+    position:absolute;
+    top: 5px;
+    right: 0;
+}
+/* positioned relative to the nearest positioned 
+ancestor (instead of positioned relative to the viewport, like fixed).
+Position it on right side, add 5px to top */
+
+
+
