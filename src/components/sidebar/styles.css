@@ -1,0 +1,43 @@
+.sidebar{
+    flex: 0.3;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    border-right: 1px solid lightgray;
+}
+/* flex 0.3 so it will take  30 percent of screen. In app css we applied app to be flex
+display flex & direction in which items 'll be placed is column(vertical). height 100 view port */
+
+.sidebar__header{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: 50px;
+}
+
+.sidebar__avatar{
+    cursor: pointer;
+    margin: 10px;
+}
+
+
+.sidebar__input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    background-color: #e1e1e1;
+    color: gray;
+    border-radius: 5px;
+}
+/* display flex to align items. flex 1 will make it so it takes most space*/
+
+.sidebar__input > input{
+    border: none;
+    background: transparent;
+    outline-width: 0;
+}
+/* make input to dont have border, color of input to be transparent. and when clicking
+and writing it'll not have outline  */
+
