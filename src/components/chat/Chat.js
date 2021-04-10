@@ -4,6 +4,7 @@ import {useSelector, useDispatch} from 'react-redux'
 import Message from '../message/Message';
 import firestore from '../../firebase/firebase'
 import firebase from 'firebase'
+import FlipMove from 'react-flip-move'
 import './styles.css'
 
 function Chat() {
@@ -77,9 +78,11 @@ function Chat() {
             {/* chat messages */}
             <div className='chat__messages'>
                 {/* map through messages array, destructure each message to id and data */}
+                <FlipMove>
                 {messages.map(({id, data})=>(
                     <Message key={id} id={id} content={data}/>
                 ))}
+                </FlipMove>
             </div>
 
             {/* chat input */}

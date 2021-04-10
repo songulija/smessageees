@@ -45,6 +45,15 @@ children 'll be placed vertically. height is 100 % of screen */
 it will take as much space as it can, so it will take remaiming space */
 .chat__messages{
     flex: 1;
+    overflow: scroll;
+}
+.chat__messages::-webkit-scrollbar{
+    display: none;
+}
+
+.chat__messages{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 

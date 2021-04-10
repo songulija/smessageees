@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react'
 import {useDispatch} from 'react-redux'
 import { setChat } from '../../redux/actions/chatActions'
 import firestore from '../../firebase/firebase'
+import * as timeago from 'timeago.js';
 import './styles.css'
 
 //destructuring props that are send to this component
@@ -37,7 +38,7 @@ function SidebarChat({id, chatName}) {
             <div className='sidebarChat__info'>
                 <h3>{chatName}</h3>
                 <p>{chatInfo[0]?.message}</p>
-                <small>{new Date(chatInfo[0]?.timestamp?.toDate()).toLocaleString()}</small>
+                <small>{timeago.format(new Date(chatInfo[0]?.timestamp?.toDate()))}</small>
             </div>
         </div>
     )
