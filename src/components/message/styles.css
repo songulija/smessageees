@@ -1,0 +1,57 @@
+.message{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: fit-content;
+    justify-content: space-between;
+    margin: 15px;
+}
+/* display flex. This defines a flex container; inline or block 
+depending on the given value. It enables a flex context for all
+ its direct children., so everything will go to row */
+
+ /* position relative becouse we will do some absolute positioning in it */
+
+
+ .message > p{
+     background-color: #f3f3f5;
+     font-size: medium;
+     padding: 15px;
+     border-radius: 20px;
+     margin: 10px;
+     margin-right: auto;
+ }
+ /* add padding, round with border radius, margin right will push it 
+ right as much as it can */
+
+ .message > small{
+     color: gray;
+     position: absolute;
+     font-size: 8px;
+     bottom: -5px;
+     right: 0;
+ }
+ /* position absolute, but becouse parent is relative it will stay relative
+ to its parent. it will go to bottom right of parent */
+
+/* if message sender exist add margin left as much as it can. so our message will be
+on right side */
+ .message__sender{
+     margin-left: auto;
+ }
+
+ /* change message photo order. so it will change side from left to right */
+ .message__sender > .message__photo{
+     order: 1;
+     margin: 15px;
+ }
+
+ /* message__photo by default is order zero */
+ .message__photo{
+     order: 0;
+ }
+
+ .message__sender > p{
+     background-color: #3cabfa;
+     color: white;
+ }
